@@ -23,7 +23,7 @@ set CleanCMake=OFF
 set XMPROOT=%buildSharedLoc%/../..
 
 :: Default Generator
-set GeneratorVersion=Visual Studio 14 2015
+set GeneratorVersion=Visual Studio 12 2013
 set GeneratorArchitecture=Win64
 set CMake_Arch64Bit=ON
 set CMake_ARCH=x64
@@ -60,9 +60,9 @@ set CMake_LibTypeFolderName=dynamic
 	)
 
 	:: Visual Studio Version
-	if /I "%1"=="2015" (
-	echo "Generator VS 2015 specified"
-	set GeneratorVersion=Visual Studio 14 2015
+	if /I "%1"=="2013" (
+	echo "Generator VS 2013 specified"
+	set GeneratorVersion=Visual Studio 12 2013
 	set CMakeGenVersion_FolderSuffix=
 	)
 
@@ -95,7 +95,7 @@ set CMake64_Folder_Suffix=
 )
 
 :: CMake Folder specified:
-set CMakeFolder="vc14/%CMake_LibTypeFolderName%/windows%CMake64_Folder_Suffix%"
+set CMakeFolder="vc12/%CMake_LibTypeFolderName%/windows%CMake64_Folder_Suffix%"
 echo CMakeFolder: %CMakeFolder%
 
 :: Create generator type from VS version and architecture
