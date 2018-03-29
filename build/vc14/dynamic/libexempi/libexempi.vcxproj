@@ -82,7 +82,7 @@
     <LinkIncremental>false</LinkIncremental>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <IncludePath>$(IncludePath)</IncludePath>
-    <OutDir>C:\Users\10008777.IS\Documents\Python Scripts\exempi-master\public\libraries\windows_x64\Release\</OutDir>
+    <OutDir>C:\Users\wakanawakana\exempi\public\libraries\windows_x64\Release\</OutDir>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -141,7 +141,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;LIBEXEMPI_EXPORTS;WIN_ENV=1;_CRT_SECURE_NO_WARNINGS=1;_SCL_SECURE_NO_WARNINGS=1;WIN64;_WIN64=1;NOMINMAX;UNICODE;_UNICODE;_ITERATOR_DEBUG_LEVEL=0;ENABLE_CPP_DOM_MODEL=1;XML_STATIC=1;HAVE_EXPAT_CONFIG_H=1;XMP_DynamicBuild=1;BUILDING_XMPCORE_LIB=1;XMP_COMPONENT_INT_NAMESPACE=AdobeXMPCore_Int;BUILDING_XMPCORE_AS_DYNAMIC=1;CMAKE_INTDIR="Release";XMPCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\10008777.IS\Documents\Python Scripts\exempi-master\public\include;C:\Users\10008777.IS\Documents\Python Scripts\exempi-master;C:\Users\10008777.IS\mLearn\darknet\wakanawakana\win-darknet\3rdparty\pthread-win32</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\wakanawakana\exempi\public\include;C:\Users\wakanawakana\exempi;C:\Users\wakanawakana\win-darknet\3rdparty\pthread-win32</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -149,7 +149,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>XMPCore.lib;XMPFiles.lib;pthread_dll.lib;MiniPDFL.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\10008777.IS\Documents\Python Scripts\exempi-master\public\libraries\windows_x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\wakanawakana\exempi\public\libraries\windows_x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <TreatLinkerWarningAsErrors>
       </TreatLinkerWarningAsErrors>
     </Link>
