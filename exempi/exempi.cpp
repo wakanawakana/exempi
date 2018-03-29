@@ -146,7 +146,7 @@ static void set_error(const XMP_Error &e)
 extern "C" {
 #endif
 
-const char NS_XMP_META[] = "adobe:ns:meta/";
+__declspec(dllexport) const char NS_XMP_META[] = "adobe:ns:meta/";
 const char NS_RDF[] = kXMP_NS_RDF;
 const char NS_EXIF[] = kXMP_NS_EXIF;
 const char NS_TIFF[] = kXMP_NS_TIFF;
@@ -175,7 +175,7 @@ const char NS_XML[] = kXMP_NS_XML;
         return r;                                                              \
     }
 
-int xmp_get_error()
+__declspec(dllexport) int xmp_get_error()
 {
 #if HAVE_NATIVE_TLS
     return g_error;
@@ -747,7 +747,7 @@ bool xmp_get_property_int32(XmpPtr xmp, const char *schema, const char *name,
         XMP_OptionBits optionBits;
         // the long converstion is needed until XMPCore is fixed it use proper
         // types.
-        ret = txmp->GetProperty_Int(schema, name, property, &optionBits);
+        ret = txmp->GetProperty_Int(schema, name, (XMP_Int32*)property, &optionBits);
         if (propsBits) {
             *propsBits = optionBits;
         }
@@ -1143,7 +1143,7 @@ bool xmp_iterator_next(XmpIteratorPtr iter, XmpStringPtr schema,
     auto titer = reinterpret_cast<SXMPIterator *>(iter);
     return titer->Next(reinterpret_cast<std::string *>(schema),
                        reinterpret_cast<std::string *>(propName),
-                       reinterpret_cast<std::string *>(propValue), options);
+                       reinterpret_cast<std::string *>(propValue), (XMP_OptionBits *)options);
 }
 
 bool xmp_iterator_skip(XmpIteratorPtr iter, XmpIterSkipOptions options)
